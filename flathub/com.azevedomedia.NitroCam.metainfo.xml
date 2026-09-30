@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>com.azevedomedia.NitroCam</id>
+  <name>NitroCam</name>
+  <summary>Phone camera as a Linux virtual webcam</summary>
+  <developer id="com.azevedomedia">
+    <name>Azevedo Media</name>
+  </developer>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>LicenseRef-proprietary</project_license>
+  <description>
+    <p>
+      NitroCam turns your iPhone or Android into a virtual camera and microphone
+      for Linux apps such as Zoom, OBS, and browsers over Wi-Fi or USB.
+    </p>
+    <p>
+      For full functionality the host system needs a virtual camera module
+      (v4l2loopback). Optional: usbmuxd/libimobiledevice for iOS USB, and adb for
+      Android USB. These host packages are not included in the Flatpak.
+    </p>
+  </description>
+  <categories>
+    <category>AudioVideo</category>
+    <category>Video</category>
+  </categories>
+  <keywords>
+    <keyword>webcam</keyword>
+    <keyword>virtual camera</keyword>
+    <keyword>webrtc</keyword>
+    <keyword>phone</keyword>
+  </keywords>
+  <url type="homepage">https://nitrocam.app</url>
+  <url type="help">https://nitrocam.app</url>
+  <url type="bugtracker">https://nitrocam.app</url>
+  <launchable type="desktop-id">com.azevedomedia.NitroCam.desktop</launchable>
+  <provides>
+    <id>com.azevedomedia.NitroCam.desktop</id>
+  </provides>
+  <screenshots>
+    <screenshot type="default">
+      <caption>Pair your phone with NitroCam on Linux</caption>
+      <image type="source">https://nitrocam.app/screenshots/linux-overview.png</image>
+    </screenshot>
+  </screenshots>
+  <releases>
+    <release version="1.0.0" date="2026-09-29">
+      <description>
+        <p>Initial Linux Flatpak release with Wi-Fi pairing and virtual camera support.</p>
+      </description>
+    </release>
+  </releases>
+  <content_rating type="oars-1.1"/>
+  <requires>
+    <display_length compare="ge">360</display_length>
+  </requires>
+  <supports>
+    <control>pointing</control>
+    <control>keyboard</control>
+  </supports>
+</component>

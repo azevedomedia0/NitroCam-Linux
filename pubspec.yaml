@@ -1,0 +1,35 @@
+name: nitrocam
+description: NitroCam Linux desktop receiver (Flatpak).
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.9.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+  nitrocam_protocol:
+    path: packages/nitrocam_protocol
+  flutter_webrtc: ^0.12.1+hotfix.1
+  provider: ^6.1.5+1
+  qr_flutter: ^4.1.0
+  window_manager: ^0.4.3
+  path_provider: ^2.1.5
+  file_picker: ^8.3.7
+  path: ^1.9.1
+  image: ^4.5.4
+  intl: ^0.20.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/icon.png
+    - assets/logo.png
+    - assets/live-icon.png
+    - assets/offline-icon.png

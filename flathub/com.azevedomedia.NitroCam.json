@@ -1,0 +1,65 @@
+{
+  "app-id": "com.azevedomedia.NitroCam",
+  "runtime": "org.freedesktop.Platform",
+  "runtime-version": "25.08",
+  "sdk": "org.freedesktop.Sdk",
+  "command": "nitrocam",
+  "finish-args": [
+    "--share=network",
+    "--share=ipc",
+    "--socket=fallback-x11",
+    "--socket=wayland",
+    "--socket=pulseaudio",
+    "--device=all",
+    "--filesystem=xdg-run/pipewire-0",
+    "--filesystem=/var/run/usbmuxd:ro",
+    "--talk-name=org.freedesktop.Avahi"
+  ],
+  "modules": [
+    {
+      "name": "nitrocam",
+      "buildsystem": "simple",
+      "build-commands": [
+        "install -d /app/bin /app/share/applications /app/share/metainfo /app/share/icons/hicolor/256x256/apps",
+        "install -D nitrocam /app/nitrocam",
+        "cp -a lib /app/",
+        "cp -a data /app/",
+        "printf '%s\\n' '#!/bin/sh' 'exec /app/nitrocam \"$@\"' > /app/bin/nitrocam",
+        "chmod 755 /app/bin/nitrocam",
+        "install -D com.azevedomedia.NitroCam.desktop /app/share/applications/com.azevedomedia.NitroCam.desktop",
+        "install -D com.azevedomedia.NitroCam.metainfo.xml /app/share/metainfo/com.azevedomedia.NitroCam.metainfo.xml",
+        "install -D icon-256.png /app/share/icons/hicolor/256x256/apps/com.azevedomedia.NitroCam.png"
+      ],
+      "sources": [
+        {
+          "type": "file",
+          "path": "../build/linux/x64/release/bundle/nitrocam",
+          "dest-filename": "nitrocam"
+        },
+        {
+          "type": "dir",
+          "path": "../build/linux/x64/release/bundle/lib",
+          "dest": "lib"
+        },
+        {
+          "type": "dir",
+          "path": "../build/linux/x64/release/bundle/data",
+          "dest": "data"
+        },
+        {
+          "type": "file",
+          "path": "com.azevedomedia.NitroCam.desktop"
+        },
+        {
+          "type": "file",
+          "path": "com.azevedomedia.NitroCam.metainfo.xml"
+        },
+        {
+          "type": "file",
+          "path": "icons/hicolor/256x256/apps/com.azevedomedia.NitroCam.png",
+          "dest-filename": "icon-256.png"
+        }
+      ]
+    }
+  ]
+}

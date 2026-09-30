@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=NitroCam
+GenericName=Virtual Webcam
+Comment=Use your phone as a virtual camera
+Exec=nitrocam
+Icon=com.azevedomedia.NitroCam
+Terminal=false
+Type=Application
+Categories=AudioVideo;Video;
+Keywords=webcam;camera;webrtc;phone;
+StartupNotify=true
+X-Flatpak=com.azevedomedia.NitroCam

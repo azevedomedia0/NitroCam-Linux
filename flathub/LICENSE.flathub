@@ -1,0 +1,21 @@
+# Flathub redistribution terms for NitroCam (com.azevedomedia.NitroCam)
+
+NitroCam application code and branding remain Proprietary © Azevedo Media.
+
+## Flatpak / Flathub redistribution grant
+
+Azevedo Media grants Flathub and end users a royalty-free, non-exclusive right to:
+
+1. Build, host, redistribute, and update the Flatpak package `com.azevedomedia.NitroCam`
+   via Flathub (and Flathub mirrors), at no charge to end users.
+2. Use the application name, icon, and screenshots solely for Flathub listing,
+   store metadata, and package identification.
+
+This grant does **not** open-source the NitroCam source code, and does not permit
+rebranding or redistribution of NitroCam outside the Flatpak packaging context
+without separate written permission.
+
+Host-side components required for full functionality (`v4l2loopback`, `usbmuxd`,
+`adb`) are third-party software under their own licenses and are not bundled.
+
+Contact: https://nitrocam.app
