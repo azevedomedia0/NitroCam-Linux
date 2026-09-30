@@ -59,7 +59,7 @@ modules:
       - type: git
         url: https://github.com/azevedomedia0/NitroCam-Linux.git
         tag: v1.0.0
-        commit: REPLACE_WITH_COMMIT
+        commit: 7b025540ef28035714b7b97f145be64b743e8abd
 
 # --- Option B: proprietary extra-data (JSON equivalent notes) ---------------
 # {
